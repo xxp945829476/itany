@@ -16,8 +16,20 @@ export default {
       msg: '下回分解的师傅'
     }
   },
+  created:function(){
+    this.getData()
+  },
   components:{
     Time
+  },
+  methods:{
+      // getData(){
+      //     this.$http.post('/api/common/getArea').then(response => {
+      //           console.log(response.data)
+      //     }, response => {
+      //           // error callback
+      //       }) 
+      // }
   }
 }
 </script>
