@@ -14,12 +14,18 @@
 	export default{
 		created(){
 			this.$store.dispatch('getGoods');
+			this.show()
 		},
 		computed:{
 			...mapGetters([
 				'goods'	
-			])
+			]),
 		},
+		methods:{
+			show(){
+				console.log(this.$route.query)
+			}
+		}
 	}
 </script>
 
