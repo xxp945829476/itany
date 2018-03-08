@@ -11,6 +11,7 @@
       <div>
       		<ul class="nav">
       			<router-link tag="li" to="/goods?name=jack">商品</router-link>
+            <router-link tag="li" to="/goods?name=mmmm">商品</router-link>
       			<router-link tag="li" to="/ratings">评价</router-link>
       			<router-link tag="li" to="/seller">商家</router-link>
       		</ul>
@@ -18,6 +19,7 @@
       <keep-alive>
           <router-view/>
       </keep-alive>
+
   </div>
 </template>
 
@@ -35,6 +37,11 @@ export default {
   mounted(){
 
   },
+   watch: {
+        $route(to, from) {
+          console.log(to.query.name)
+        }
+      },
   components:{
       'v-header':Header
   },

@@ -14,18 +14,22 @@
 	export default{
 		created(){
 			this.$store.dispatch('getGoods');
-			this.show()
+			this.$store.dispatch('getName',this.$route.query.name);
+		},
+		mounted(){
+			// console.log(this.$route.query)
+			// this.$store.commit('getName',this.$route.query)
 		},
 		computed:{
 			...mapGetters([
-				'goods'	
+				'goods'
 			]),
 		},
-		methods:{
-			show(){
-				console.log(this.$route.query)
-			}
-		}
+		// methods:{
+		// 	show(){
+		// 		console.log(this.$route.query)
+		// 	}
+		// }
 	}
 </script>
 

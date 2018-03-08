@@ -15,7 +15,6 @@
 	export default{
 		created(){
 			this.$store.dispatch('getSeller');
-			this.$store.dispatch('getGooder')
 		},
 		computed:{
 			...mapGetters([
